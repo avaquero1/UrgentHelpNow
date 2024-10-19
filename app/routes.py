@@ -1,7 +1,9 @@
 from flask import Blueprint, render_template
 
+# Define the blueprint for the main routes
 main = Blueprint('main', __name__)
 
+# Route for the home/landing page
 @main.route('/')
 def index():
-    return "Welcome to the Volunteer Platform!"
+    return render_template('index.html')

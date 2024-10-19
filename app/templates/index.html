@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urgent Help Now</title>
+
+  <!-- Correct reference to styles.css -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+  <!-- Header with logo and hamburger menu -->
+  <header class="header">
+    <div class="header__logo">VolunteerHub</div>
+    <button class="header__menu-btn" aria-label="Open Menu">
+      <span class="header__menu-icon"></span>
+    </button>
+  </header>
+
+  <!-- Sidebar Menu -->
+  <nav class="mobile-nav" id="mobileNav">
+    <ul class="mobile-nav__list">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Sign Up</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content area -->
+  <main class="main">
+    <!-- Hero section with purpose statement and upload CTA -->
+    <section class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">Need help? Upload a photo and get assistance today from local volunteers!</h1>
+        <button class="hero__cta-btn">Upload a Photo to Request Help</button>
+      </div>
+    </section>
+
+    <!-- Featured MVP Volunteer Section -->
+    <section class="mvp-volunteer">
+      <img src="volunteer.jpg" alt="MVP Volunteer" class="mvp-volunteer__image">
+      <div class="mvp-volunteer__info">
+        <h2 class="mvp-volunteer__name">Sarah, Local Volunteer</h2>
+        <p class="mvp-volunteer__desc">Helped 35 people with tech support after Hurricane Ian</p>
+        <div class="mvp-volunteer__badges">
+          <span class="badge">Top Volunteer</span>
+          <span class="badge">35 Tasks Completed</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Volunteer Sign-Up Button -->
+    <section class="volunteer-signup">
+      <button class="volunteer-signup__btn">Want to help? Sign up to volunteer</button>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
